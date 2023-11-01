@@ -15,5 +15,6 @@ EditorBuildSettings:
     path: Assets/Scenes/HologramScene.unity
     guid: d2acb5429b6416f43963bf0c837fcab5
   m_configObjects:
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 338b324bd79c0e4469950aabdeb1ded0, type: 2}
     Unity.XR.PXR.Settings: {fileID: 11400000, guid: 27dd6118e82996b49a061e630523a776, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 543c3ed2f21fe1f419a733edf415cf95, type: 2}
