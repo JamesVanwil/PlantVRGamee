@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4315,7 +4315,6 @@ GameObject:
   - component: {fileID: 1293612240}
   - component: {fileID: 1293612239}
   - component: {fileID: 1293612238}
-  - component: {fileID: 1293612237}
   m_Layer: 0
   m_Name: Seed 002 (1)
   m_TagString: Untagged
@@ -4323,27 +4322,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!95 &1293612237
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1293612236}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 68c568c4557dbe9418f69a72d09db408, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &1293612238
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4565,7 +4543,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1293612236}
   m_LocalRotation: {x: -0, y: 0.30116466, z: -0, w: 0.9535722}
-  m_LocalPosition: {x: 10.605, y: 1.582, z: -18.787}
+  m_LocalPosition: {x: 10.986, y: 1.577, z: -19.284}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children: []
   m_Father: {fileID: 0}
@@ -6406,7 +6384,7 @@ MonoBehaviour:
   object1Collider: {fileID: 949797715}
   object2Collider: {fileID: 1747005104}
   zoneCollider: {fileID: 732943601}
-  Seed: {fileID: 1129581570}
+  Seed: {fileID: 1293612236}
 --- !u!4 &1899594647
 Transform:
   m_ObjectHideFlags: 0
@@ -8810,7 +8788,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &8737719666321131988
 MonoBehaviour:
   m_ObjectHideFlags: 0
