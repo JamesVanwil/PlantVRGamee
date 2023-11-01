@@ -3,8 +3,9 @@ using UnityEngine.EventSystems;
 
 public class DraggableImages : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-    private Vector2 startPosition;
+    private Vector3 startPosition;
     private Transform startParent;
+    private Rigidbody rb;
 
     public void OnBeginDrag(PointerEventData eventData)
     {
@@ -27,5 +28,18 @@ public class DraggableImages : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         // Restore the parent and position to their original values.
         transform.SetParent(startParent);
         transform.position = startPosition;
+    }
+
+    public void ResetPosition()
+    {
+        // Reset the cube's position to its initial position.
+        transform.position = startPosition;
+
+        // You may also want to reset its velocity and angular velocity to prevent any ongoing physics motion.
+        if (rb != null)
+        {
+            rb.velocity = Vector3.zero;
+            rb.angularVelocity = Vector3.zero;
+        }
     }
 }

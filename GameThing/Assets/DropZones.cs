@@ -4,38 +4,40 @@ using System.Collections;
 
 public class DropZones : MonoBehaviour, IDropHandler
 {
-    public GameObject correctImage;
-    public GameObject wrongImage;
-    public GameObject correctNewImage;
+    public GameObject correctCube;
+    public GameObject wrongCube;
+    public GameObject correctNewCube;
 
-    private Coroutine hideImageCoroutine;
+    private Coroutine hideCubeCoroutine;
 
     public void OnDrop(PointerEventData eventData)
     {
         DraggableImages draggable = eventData.pointerDrag.GetComponent<DraggableImages>();
         if (draggable != null)
         {
-            if (draggable.gameObject == correctImage)
+            if (draggable.CompareTag("CorrectCubeTag"))
             {
                 draggable.enabled = false;
-                correctNewImage.SetActive(true);
+                correctCube.SetActive(false);
+                correctNewCube.SetActive(true);
             }
-            else
+            else if (draggable.CompareTag("WrongCubeTag"))
             {
-                wrongImage.SetActive(true);
-
-                if (hideImageCoroutine != null)
+                wrongCube.SetActive(true);
+                // Reset the cube's position
+                draggable.ResetPosition(); // Implement this function in DraggableCubes script
+                if (hideCubeCoroutine != null)
                 {
-                    StopCoroutine(hideImageCoroutine);
+                    StopCoroutine(hideCubeCoroutine);
                 }
-                hideImageCoroutine = StartCoroutine(HideImageAfterDelay(wrongImage, 2f));
+                hideCubeCoroutine = StartCoroutine(HideCubeAfterDelay(wrongCube, 2f));
             }
         }
     }
 
-    private IEnumerator HideImageAfterDelay(GameObject imageToHide, float delay)
+    private IEnumerator HideCubeAfterDelay(GameObject cubeToHide, float delay)
     {
         yield return new WaitForSeconds(delay);
-        imageToHide.SetActive(false);
+        cubeToHide.SetActive(false);
     }
 }
