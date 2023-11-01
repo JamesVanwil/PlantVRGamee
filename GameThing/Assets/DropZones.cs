@@ -6,7 +6,7 @@ public class DropZones : MonoBehaviour, IDropHandler
 {
     public GameObject correctImage;
     public GameObject wrongImage;
-    public GameObject correctNewImage; // New image for the correct drop.
+    public GameObject correctNewImage;
 
     private Coroutine hideImageCoroutine;
 
@@ -17,20 +17,13 @@ public class DropZones : MonoBehaviour, IDropHandler
         {
             if (draggable.gameObject == correctImage)
             {
-                // The correct image has been dropped.
-                // Lock the image in place (if necessary).
                 draggable.enabled = false;
-
-                // Show the correct new image.
                 correctNewImage.SetActive(true);
             }
             else
             {
-                // A wrong image has been dropped.
-                // Show the wrong image.
                 wrongImage.SetActive(true);
 
-                // Start a coroutine to hide the wrong image after 2 seconds.
                 if (hideImageCoroutine != null)
                 {
                     StopCoroutine(hideImageCoroutine);
