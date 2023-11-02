@@ -13,7 +13,7 @@ public class MainMenu : MonoBehaviour
 
     public void PlayGame()
     {
-        SceneManager.LoadScene("LAB");
+        SceneManager.LoadScene("LayoutGreyBox");
 
     }
 }
