@@ -11,8 +11,9 @@ public class FlowerAppear: MonoBehaviour
     {
         if (other.gameObject == cubeToDisappear)
         {
-            cubeToDisappear.SetActive(false); // Hide the cube
             objectToAppear.SetActive(true);   // Show the new object
+            cubeToDisappear.SetActive(false); // Hide the cube
+            
         }
     }
 }
