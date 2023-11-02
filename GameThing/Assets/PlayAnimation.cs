@@ -5,14 +5,29 @@ using UnityEngine;
 public class PlayAnimation : MonoBehaviour
 {
     public Animator glassAnimation;
+    private bool open;
 
-    public void PlayGlassOpenAnimation()
+    public void Start()
     {
-        glassAnimation.GetBool("Open");
+        glassAnimation.SetBool("Open", false);
+        glassAnimation.SetBool("Close", false);
+        open = false;
     }
 
-    public void PlayGlassCloseAnimation()
+    public void OpenANim()
     {
-        glassAnimation.GetBool("Close");
+        open = true;
+        glassAnimation.SetBool("Open", true);
+        glassAnimation.SetBool("Close", false);
+
     }
+
+    public void CloseANim()
+    {
+        glassAnimation.SetBool("Open", false);
+        glassAnimation.SetBool("Close", true);
+        open = false;
+    }
+
+
 }
