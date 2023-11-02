@@ -11,9 +11,14 @@ public class FlowerAppear: MonoBehaviour
     {
         if (other.gameObject == cubeToDisappear)
         {
+            Debug.Log("Trigger entered by cubeToDisappear");
             objectToAppear.SetActive(true);   // Show the new object
             cubeToDisappear.SetActive(false); // Hide the cube
-            
+        }
+        else
+        {
+            Debug.Log("Trigger entered by something else");
         }
     }
+
 }
