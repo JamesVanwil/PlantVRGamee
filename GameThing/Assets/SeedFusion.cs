@@ -23,6 +23,8 @@ public class SeedFusion : MonoBehaviour
             // Trigger the animation
             Seed.SetActive(true);
             animator.SetTrigger("PlayAnimation");
+            object1Collider.enabled = false;
+            object2Collider.enabled = false;
         }
     }
 }
