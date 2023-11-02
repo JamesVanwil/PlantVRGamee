@@ -15,6 +15,4 @@ public class PlayAnimation : MonoBehaviour
     {
         glassAnimation.GetBool("Close");
     }
-
-
 }
