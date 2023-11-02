@@ -6,8 +6,15 @@ public class PlayAnimation : MonoBehaviour
 {
     public Animator glassAnimation;
 
-    public void PlayGlassAnimation()
+    public void PlayGlassOpenAnimation()
     {
-        glassAnimation.SetTrigger("Open");
+        glassAnimation.GetBool("Open");
     }
+
+    public void PlayGlassCloseAnimation()
+    {
+        glassAnimation.GetBool("Close");
+    }
+
+
 }
