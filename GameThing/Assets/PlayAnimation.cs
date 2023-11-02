@@ -8,11 +8,11 @@ public class PlayAnimation : MonoBehaviour
 
     public void PlayGlassOpenAnimation()
     {
-        glassAnimation.GetBool("Open");
+        glassAnimation.SetTrigger("Open");
     }
 
     public void PlayGlassCloseAnimation()
     {
-        glassAnimation.GetBool("Close");
+        glassAnimation.SetTrigger("Close");
     }
 }
