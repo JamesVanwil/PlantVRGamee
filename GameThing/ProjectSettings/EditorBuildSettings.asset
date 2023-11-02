@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 13e8decf0fe303a47a417bdb29bbffbf
+  - enabled: 1
     path: Assets/Scenes/HologramScene.unity
     guid: d2acb5429b6416f43963bf0c837fcab5
   - enabled: 1
