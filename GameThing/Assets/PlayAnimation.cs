@@ -5,10 +5,14 @@ using UnityEngine;
 public class PlayAnimation : MonoBehaviour
 {
     public Animator glassAnimation;
-    public GameObject object1; // Reference to the first object
-    public GameObject Flower; // Reference to the flower object
     public Transform zoneTransform; // Reference to the zone's transform
     private bool open;
+
+    public GameObject seed; // Reference to the seed object
+    public GameObject flower; // Reference to the flower object
+
+    public GameObject seed2; // Reference to the seed object
+    public GameObject flower2; // Reference to the flower object
 
     public void Start()
     {
@@ -29,30 +33,55 @@ public class PlayAnimation : MonoBehaviour
         glassAnimation.SetBool("Open", false);
         glassAnimation.SetBool("Close", true);
         open = false;
-        StartCoroutine(DeactivateObject1AndActivateFlower());
+        StartCoroutine(DeactivateSeedAndActivateFlower());
+        StartCoroutine(DeactivateSeedAndActivateFlower2());
     }
 
-    private IEnumerator DeactivateObject1AndActivateFlower()
+    private IEnumerator DeactivateSeedAndActivateFlower()
     {
         // Wait for the close animation to finish
         yield return new WaitForSeconds(glassAnimation.GetCurrentAnimatorStateInfo(0).length);
 
-        // Calculate the distance between the object and the zone
-        float distance = Vector3.Distance(object1.transform.position, zoneTransform.position);
-
-        // Define a threshold distance for the object to disappear and the flower to appear
+        // Calculate the distance between the seed and the zone
+        float distance = Vector3.Distance(seed.transform.position, zoneTransform.position);
         float thresholdDistance = 1.0f; // Adjust this value as needed
 
         if (distance < thresholdDistance)
         {
-            // Deactivate the first object's renderer and collider
-            Renderer object1Renderer = object1.GetComponent<Renderer>();
-            Collider object1Collider = object1.GetComponent<Collider>();
+            // Deactivate the seed's renderer and collider
+            Renderer seedRenderer = seed.GetComponent<Renderer>();
+            Collider seedCollider = seed.GetComponent<Collider>();
 
-            object1Renderer.enabled = false;
-            object1Collider.enabled = false;
+            seedRenderer.enabled = false;
+            seedCollider.enabled = false;
 
-            Flower.SetActive(true);
+            // Activate the corresponding flower
+            flower.SetActive(true);
         }
+
+    }
+
+    private IEnumerator DeactivateSeedAndActivateFlower2()
+    {
+        // Wait for the close animation to finish
+        yield return new WaitForSeconds(glassAnimation.GetCurrentAnimatorStateInfo(0).length);
+
+        // Calculate the distance between the seed and the zone
+        float distance = Vector3.Distance(seed2.transform.position, zoneTransform.position);
+        float thresholdDistance = 1.0f; // Adjust this value as needed
+
+        if (distance < thresholdDistance)
+        {
+            // Deactivate the seed's renderer and collider
+            Renderer seedRenderer = seed2.GetComponent<Renderer>();
+            Collider seedCollider = seed2.GetComponent<Collider>();
+
+            seedRenderer.enabled = false;
+            seedCollider.enabled = false;
+
+            // Activate the corresponding flower
+            flower2.SetActive(true);
+        }
+
     }
 }
