@@ -629,7 +629,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cubeToDisappear: {fileID: 1293612236}
-  objectToAppear: {fileID: 159920505}
+  cubeToAppear: {fileID: 159920505}
 --- !u!1 &159920505
 GameObject:
   m_ObjectHideFlags: 0
@@ -6752,6 +6752,8 @@ MonoBehaviour:
   object2Collider: {fileID: 1747005104}
   zoneCollider: {fileID: 732943601}
   Seed: {fileID: 1293612236}
+  object1: {fileID: 949797714}
+  object2: {fileID: 1747005103}
 --- !u!4 &1899594647
 Transform:
   m_ObjectHideFlags: 0
