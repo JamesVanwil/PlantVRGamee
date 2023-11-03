@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class Footsteps : MonoBehaviour
 {
@@ -19,12 +20,13 @@ public class Footsteps : MonoBehaviour
     [SerializeField] float volumeMin = 0.95f;
 
     [SerializeField] float volumeMax = 1.00f;
+
     bool playerisMoving;
 
     void Start()
     {
-        randomlist = new List<AudioClip>(collection: new AudioClip[steps.Length]);
-        InvokeRepeating(methode / name:"CallFootsteps", time: 0, repeatRate stepSpeed);
+        randomlist = new List<AudioClip>(new AudioClip[steps.Length]);
+        InvokeRepeating("CallFootsteps", 0, stepSpeed);
         source = gameObject.AddComponent<AudioSource>();
         source.outputAudioMixerGroup = mixerOutput;
 
@@ -35,7 +37,7 @@ public class Footsteps : MonoBehaviour
 
     }
 
-    public void Update()
+    void Update()
     {
         if (Input.GetAxis("Vertical") >= 0.02f || Input.GetAxis("Horizontal") >= 0.02f || Input.GetAxis("Vertical") < 0f || Input.GetAxis("Horizontal") < 0f)
         {
@@ -68,7 +70,7 @@ public class Footsteps : MonoBehaviour
         source.PlayOneShot(randomlist[i]);
         randomlist.RemoveAt(i);
 
-        if(randomlist.Count == 0)
+        if (randomlist.Count == 0)
         {
             Reset();
         }
