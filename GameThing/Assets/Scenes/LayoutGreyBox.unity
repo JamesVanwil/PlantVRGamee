@@ -580,8 +580,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 151199101}
-  - component: {fileID: 151199100}
-  - component: {fileID: 151199102}
   m_Layer: 0
   m_Name: IncubatorCollider
   m_TagString: Untagged
@@ -589,19 +587,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!65 &151199100
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 151199099}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.6902151, y: 0.51511455, z: 0.55526924}
-  m_Center: {x: -0.0024256706, y: -0.24244273, z: -0.08205128}
 --- !u!4 &151199101
 Transform:
   m_ObjectHideFlags: 0
@@ -610,26 +595,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 151199099}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.465, y: 2.738, z: -20.665}
+  m_LocalPosition: {x: 12.465, y: 2.458, z: -20.7126}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 47
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &151199102
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 151199099}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afd9f7e8858ad9e4c8913853f21c2d97, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cubeToDisappear: {fileID: 1293612236}
-  cubeToAppear: {fileID: 159920505}
 --- !u!1 &159920505
 GameObject:
   m_ObjectHideFlags: 0
@@ -2329,7 +2300,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5283898766228162098, guid: 36eff8b49ecdca745894efb1d2ce5f8f, type: 3}
       propertyPath: m_OnLeverActivate.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: CloseANim
+      value: CloseAnim
       objectReference: {fileID: 0}
     - target: {fileID: 5283898766228162098, guid: 36eff8b49ecdca745894efb1d2ce5f8f, type: 3}
       propertyPath: m_OnLeverDeactivate.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
@@ -2337,7 +2308,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5283898766228162098, guid: 36eff8b49ecdca745894efb1d2ce5f8f, type: 3}
       propertyPath: m_OnLeverDeactivate.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OpenANim
+      value: OpenAnim
       objectReference: {fileID: 0}
     - target: {fileID: 5283898766228162098, guid: 36eff8b49ecdca745894efb1d2ce5f8f, type: 3}
       propertyPath: m_OnLeverActivate.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -2975,6 +2946,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   glassAnimation: {fileID: 5764608441340293183}
+  object1: {fileID: 1293612236}
+  Flower: {fileID: 159920505}
+  zoneTransform: {fileID: 151199101}
 --- !u!4 &755122808
 Transform:
   m_ObjectHideFlags: 0
