@@ -17,9 +17,16 @@ public class MiniGame : MonoBehaviour
     private bool blueCubeCorrectlyPlaced = false;
     private bool pinkCubeCorrectlyPlaced = false;
 
-    public Transform teleportLocation;
-    public GameObject playerCharacter;
+    public Transform teleportTarget;
+    public GameObject Player;
 
+    public GameObject GoBackLever;
+
+
+    private void Start()
+    {
+        
+    }
     void Update()
     {
         CorrectBlueCube();
@@ -30,7 +37,7 @@ public class MiniGame : MonoBehaviour
             CorrectBlueCubeToAppear.activeSelf && CorrectPinkCubeToAppear.activeSelf)
         {
             // Teleport the player character
-            TeleportPlayerToDestination();
+            GoBackLever.SetActive(true);
         }
     }
 
@@ -74,20 +81,8 @@ public class MiniGame : MonoBehaviour
         }
     }
 
-    private void TeleportPlayerToDestination()
+    public void TeleportPlayerToDestination()
     {
-        if (teleportLocation != null && playerCharacter != null)
-        {
-            // Set the player's position to the teleport destination's position
-            playerCharacter.transform.position = teleportLocation.position;
-
-            // Reset the player's velocity if it has a Rigidbody
-            Rigidbody playerRigidbody = playerCharacter.GetComponent<Rigidbody>();
-            if (playerRigidbody != null)
-            {
-                playerRigidbody.velocity = Vector3.zero;
-                playerRigidbody.angularVelocity = Vector3.zero;
-            }
-        }
+        Player.transform.position = teleportTarget.transform.position;
     }
 }
