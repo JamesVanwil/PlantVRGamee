@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8108409077477300855}
   - component: {fileID: -1497658262042173298}
   - component: {fileID: 7944311225824624193}
-  - component: {fileID: -8242889340001033753}
+  - component: {fileID: 4867506981507731514}
   m_Layer: 0
   m_Name: Seed 002
   m_TagString: Untagged
@@ -235,8 +235,8 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
---- !u!64 &-8242889340001033753
-MeshCollider:
+--- !u!65 &4867506981507731514
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -245,7 +245,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -5495902117074765545, guid: 6d914b813e0b74f15b90d4b8959cb7f0, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 0.029334476, y: 0.019815033, z: 0.020410782}
+  m_Center: {x: -0.0074712657, y: 0.0008144271, z: 0.0010916071}
