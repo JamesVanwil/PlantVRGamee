@@ -14,6 +14,9 @@ public class PlayAnimation : MonoBehaviour
     public GameObject seed2; // Reference to the seed object
     public GameObject flower2; // Reference to the flower object
 
+    public GameObject seed3; // Reference to the seed object
+    public GameObject flower3; // Reference to the flower object
+
     public void Start()
     {
         glassAnimation.SetBool("Open", false);
@@ -35,6 +38,7 @@ public class PlayAnimation : MonoBehaviour
         open = false;
         StartCoroutine(DeactivateSeedAndActivateFlower());
         StartCoroutine(DeactivateSeedAndActivateFlower2());
+        StartCoroutine(DeactivateSeedAndActivateFlower3());
     }
 
     private IEnumerator DeactivateSeedAndActivateFlower()
@@ -81,6 +85,30 @@ public class PlayAnimation : MonoBehaviour
 
             // Activate the corresponding flower
             flower2.SetActive(true);
+        }
+
+    }
+
+    private IEnumerator DeactivateSeedAndActivateFlower3()
+    {
+        // Wait for the close animation to finish
+        yield return new WaitForSeconds(glassAnimation.GetCurrentAnimatorStateInfo(0).length);
+
+        // Calculate the distance between the seed and the zone
+        float distance = Vector3.Distance(seed3.transform.position, zoneTransform.position);
+        float thresholdDistance = 1.0f; // Adjust this value as needed
+
+        if (distance < thresholdDistance)
+        {
+            // Deactivate the seed's renderer and collider
+            Renderer seedRenderer = seed3.GetComponent<Renderer>();
+            Collider seedCollider = seed3.GetComponent<Collider>();
+
+            seedRenderer.enabled = false;
+            seedCollider.enabled = false;
+
+            // Activate the corresponding flower
+            flower3.SetActive(true);
         }
 
     }
