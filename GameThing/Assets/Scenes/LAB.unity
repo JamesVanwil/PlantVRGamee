@@ -2370,8 +2370,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4284065898
+  m_fontColor: {r: 0.4156863, g: 0.65882355, b: 0.34901962, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -3114,8 +3114,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 751385303}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.99303436, y: 5.450987, z: -9.471952}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalPosition: {x: 0.99303436, y: 5.450987, z: -8.841}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children: []
   m_Father: {fileID: 760777394}
   m_RootOrder: 11
@@ -3350,8 +3350,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4292515016
+  m_fontColor: {r: 0.7843138, g: 0.5803922, b: 0.854902, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -3469,9 +3469,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   glassAnimation: {fileID: 1993689268}
   zoneTransform: {fileID: 1917957373}
-  seed: {fileID: 143972570096983441}
+  seed: {fileID: 308557035810824593}
   flower: {fileID: 3520072414598885726}
-  seed2: {fileID: 308557035810824593}
+  seed2: {fileID: 143972570096983441}
   flower2: {fileID: 6499232223558043021}
   seed3: {fileID: 1099068701261166830}
   flower3: {fileID: 3637444461346331536}
@@ -5291,8 +5291,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1028000775}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.99303436, y: 2.2309856, z: -9.475981}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalPosition: {x: 0.99303436, y: 2.266, z: -8.821}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children: []
   m_Father: {fileID: 760777394}
   m_RootOrder: 9
@@ -8519,8 +8519,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4281878582
+  m_fontColor: {r: 0.21176472, g: 0.28235295, b: 0.21960786, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
